@@ -108,7 +108,7 @@ $(function () {
         // loadFeed() is asynchronous.
 
         let initialentries;
-        let newentries = document.querySelector('.feed').innerHTML; //define newentries as the entries in feed after the loadFeed function has run
+        
 
         beforeEach(function (done) {
             loadFeed(0, function () {
@@ -121,6 +121,7 @@ $(function () {
         });
 
         it('after loadFeed function ran, content actually changes', function () {
+            let newentries = document.querySelector('.feed').innerHTML; //define newentries as the entries in feed after the loadFeed function has run
             expect(initialentries).not.toBe(newentries); //expect the initialentries and the newentries to not be the same.
 
         });
